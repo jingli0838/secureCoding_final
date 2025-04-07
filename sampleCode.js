@@ -4,7 +4,9 @@ import { config } from './config.js';
 
 const baseUrl = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos"
 
-const myApiKey = config.NASA_API_KEY;
+const myApiKey = config.NASA_API_KEY; 
+// Even though the API key is imported from another file, since it's still using in frontend, anyone can view the key using browser dev tools.
+// Should use a backend server to make API requests securely and only return necessary data to the frontend
 
 const dateNode = document.getElementById("earthDate");
 const containerNode = document.getElementById("marsPhotosContainer");
